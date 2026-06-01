@@ -4,6 +4,8 @@
 
 A list of general instructions based on the steps I used to setup each sensor.
 
+Once all necessary files are on a microcontroller or in a project folder, functions can be called upon in a main.py to start testing your setup.
+
 *Note: More or less setup may be required depending on your personal setup.
 
 ### HDC302x Folder
