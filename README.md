@@ -10,7 +10,11 @@ Once all necessary files are on a microcontroller or in a project folder, functi
 
 ### HDC302x Folder
 
-You will need to install the hdc302x_AdafruitDriver.py file to use anything in this folder.
+You will need to install the hdc302x_AdafruitDriver.py file to use anything in this folder. <br>
+Full Documentation on Sensor Drivers [^1]
 
 If using HDC3022, install hdc3022_Sensor.py file. <br>
 Once you have installed the required Driver and Sensor file drag them into a microcontroller or project folder along with a main.py file.
+
+___
+[^1]: https://github.com/adafruit/Adafruit_CircuitPython_HDC302x
