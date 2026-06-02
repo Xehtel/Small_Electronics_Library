@@ -13,6 +13,7 @@ import time
 import hdc302x_AdafruitDriver #Driver Import
 
 #Class Allows Import of All Included Functions
+#Designed to Support 1 to 8 HDC3022 Sensors
 class HDC3022_Sensor:
     #I2C Buses
     i2c0 = I2C(0, scl=Pin(1), sda=Pin(0), freq=100000) #I2C Bus 0 (GP1=SCL, GP0=SDA)
@@ -28,46 +29,61 @@ class HDC3022_Sensor:
         ("Sensor 7", "x046", hdc302x_AdafruitDriver.HDC302X(i2c1, address=0x46)), #Sensor 7 on Bus 1
         ("Sensor 8", "x047", hdc302x_AdafruitDriver.HDC302X(i2c1, address=0x47))] #Sensor 8 on Bus 1
 
-  
-#=======================================DEBUGGING FUNCTIONS======================================#
-#~~~~~~~~~~~~~~~~~~~~~~~~(Functions Should Be Put In Main Loop To Debug)~~~~~~~~~~~~~~~~~~~~~~~~~#
+    #Lists All I2C sensorList(name, address, sensor) Data
+    timestamps = []
+    nameList = [] 
+    addrsList = [] 
+    tempsList = []  
+    humsList = [] 
 
-    #Basic Reading Supporting 1 to 8 HDC3022 Sensors & Prints the SensorName, SensorAddress, Temperature, Humidity, & the Timestamp
-    @staticmethod 
-    def debug_readings():
-    #Debug Data for sensorList Print
-        timestamps = [] #Lists all I2C Sensors Timestamps for Print Statements
-        nameList = [] #Lists Sensor Names for Print Statements
-        addrsList = [] #Lists Sensor Addresses for Print Statements
-        tempsList = [] #Lists Sensor Temperatures for Print Statements
-        humsList = [] #Lists Bus 0 Humidities Names for Print Statements
+#=========================================MAIN FUNCTIONS=========================================#
+
+    #Grabs Data from Each Sensor & Sends it to Corresponding Data Lists
+    def grab_data():
+        #Clear the Lists for Next Iteration of Data
+        HDC302X_Sensors.timestamps.clear()
+        HDC302X_Sensors.nameList.clear()
+        HDC302X_Sensors.addrsList.clear()
+        HDC302X_Sensors.tempsList.clear()
+        HDC302X_Sensors.humsList.clear()
+        #Loops Through an Iteration of Data
         for i, (sensor_name, addrs, sensor) in enumerate(HDC302X_Sensors.sensorList):
+            #Try to Grab Sensor Data, Fill with Placeholders if no Sensor
             try:
                 #Grabs Sensor Data
                 temp = sensor.temperature
                 hum = sensor.relative_humidity
                 #Appends Sensor Data
-                nameList.append(sensor_name)
-                addrsList.append(addrs)
-                tempsList.append(temp)
-                humsList.append(hum)
+                HDC302X_Sensors.nameList.append(sensor_name)
+                HDC302X_Sensors.addrsList.append(addrs)
+                HDC302X_Sensors.tempsList.append(temp)
+                HDC302X_Sensors.humsList.append(hum)
                 #Takes Current Timestamp
-                now = time.localtime() 
+                now = time.localtime() #To Accurately Timestamp Each Sensor Separately, Must Copy to Each Enumeration of Try/Except
                 times = ("{:04d}-{:02d}-{:02d} " "{:02d}:{:02d}:{:02d}").format(now[0], now[1], now[2], now[3], now[4], now[5], now[6], now[7])
                 #Appends Timestamp
-                timestamps.append(times)
+                HDC302X_Sensors.timestamps.append(times)
             except Exception as e:
                 #Appends Placeholder Sensor Data
-                nameList.append(sensor_name)
-                addrsList.append(addrs)
-                tempsList.append(0.0)
-                humsList.append(0.0)
+                HDC302X_Sensors.nameList.append(sensor_name)
+                HDC302X_Sensors.addrsList.append(addrs)
+                HDC302X_Sensors.tempsList.append(0.0)
+                HDC302X_Sensors.humsList.append(0.0)
                 #Takes Current Timestamp
-                now = time.localtime() 
+                now = time.localtime() #To Accurately Timestamp Each Sensor Separately, Must Copy to Each Enumeration of Try/Except
                 times = ("{:04d}-{:02d}-{:02d} " "{:02d}:{:02d}:{:02d}").format(now[0], now[1], now[2], now[3], now[4], now[5], now[6], now[7])
                 #Appends Timestamp
-                timestamps.append(times)
-        
+                HDC302X_Sensors.timestamps.append(times)
+#=====================================END OF MAIN FUNCTIONS======================================#
+
+    
+
+#=======================================DEBUGGING FUNCTIONS======================================#
+#~~~~~~~~~~~~~~~~~~~~~~~~(Functions Should Be Put In Main Loop To Debug)~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+    #Prints the SensorName, SensorAddress, Temperature, Humidity, & the Timestamp
+    @staticmethod 
+    def debug_readings():        
         #Debug Prints for Bus 0 & Bus 1 (All Sensors on sensorList) 
         print(f"\n================================SENSOR LOGGER================================")
         print(f"---BUS 0---")
