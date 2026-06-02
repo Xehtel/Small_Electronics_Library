@@ -1,8 +1,8 @@
-# Basic_Sensors_Library | README.md
+# Small Electronics Library | README.md
 
 ## GENERAL INSTRUCTIONS
 
-A list of general instructions based on the steps I used to setup each sensor.
+A list of general instructions based on the steps I used to setup each small electronic.
 
 Once all necessary files are on a microcontroller or in a project folder, functions can be called upon in a main.py to start testing your setup.
 
@@ -15,7 +15,7 @@ Raspberry Pi Pico W Datasheet [^1]
 ### HDC302x Folder
 
 You will need to install the hdc302x_AdafruitDriver.py file to use anything in this folder. <br>
-Full Documentation on Sensor Drivers: [^2]
+GitHub to HDC302x Drivers: [^2]
 
 If using HDC3022, install hdc3022_Sensor.py file. <br>
 Once you have installed the required Driver and Sensor file drag them into a microcontroller or project folder along with a main.py file.
