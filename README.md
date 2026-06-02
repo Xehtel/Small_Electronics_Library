@@ -23,8 +23,8 @@ Once you have installed the required Driver and Sensor file drag them into a mic
 ### LCD Folder
 
 You will need to install sysfont.py & st7735_Driver.py to use anything in this folder. <br>
-GitHub to ST7735 Drivers: [^3]
-GitHub to sysfont: [^4]
+GitHub to ST7735 Drivers: [^3] <br>
+GitHub to sysfont: [^4] <br>
 
 ___
 [^1]: https://pip-assets.raspberrypi.com/categories/686-raspberry-pi-pico-w/documents/RP-008312-DS-1-pico-w-datasheet.pdf
