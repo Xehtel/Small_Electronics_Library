@@ -1,6 +1,6 @@
 #About: Gathers Data from the HDC3022
 #Created: 5/21/2026
-#Last Edit: Xehtel on 6/1/2026
+#Last Edit: Xehtel on 6/2/2026
 #================================================================================================#
 #Requires: hdc302x_AdafruitDriver.py
 #Interpreter: MicroPython
