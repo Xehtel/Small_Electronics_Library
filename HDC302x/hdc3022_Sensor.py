@@ -10,7 +10,7 @@
 #Imports
 from machine import Pin, I2C
 import time
-import hdc302x_AdafruitDriver #Driver Import
+import hdc302x_Driver #Driver Import
 
 #Class Allows Import of All Included Functions
 #Designed to Support 1 to 8 HDC3022 Sensors
@@ -20,14 +20,14 @@ class HDC3022_Sensor:
     i2c1 = I2C(1, scl=Pin(3), sda=Pin(2), freq=100000) #I2C Bus 1 (GP3=SCL, GP2=SDA)
     
     sensorList = [
-        ("Sensor 1", "x044", hdc302x_AdafruitDriver.HDC302X(i2c0, address=0x44)), #Sensor 1 on Bus 0
-        ("Sensor 2", "x045", hdc302x_AdafruitDriver.HDC302X(i2c0, address=0x45)), #Sensor 2 on Bus 0
-        ("Sensor 3", "x046", hdc302x_AdafruitDriver.HDC302X(i2c0, address=0x46)), #Sensor 3 on Bus 0
-        ("Sensor 4", "x047", hdc302x_AdafruitDriver.HDC302X(i2c0, address=0x47)), #Sensor 4 on Bus 0
-        ("Sensor 5", "x044", hdc302x_AdafruitDriver.HDC302X(i2c1, address=0x44)), #Sensor 5 on Bus 1
-        ("Sensor 6", "x045", hdc302x_AdafruitDriver.HDC302X(i2c1, address=0x45)), #Sensor 6 on Bus 1
-        ("Sensor 7", "x046", hdc302x_AdafruitDriver.HDC302X(i2c1, address=0x46)), #Sensor 7 on Bus 1
-        ("Sensor 8", "x047", hdc302x_AdafruitDriver.HDC302X(i2c1, address=0x47))] #Sensor 8 on Bus 1
+        ("Sensor 1", "x044", hdc302x_Driver.HDC302X(i2c0, address=0x44)), #Sensor 1 on Bus 0
+        ("Sensor 2", "x045", hdc302x_Driver.HDC302X(i2c0, address=0x45)), #Sensor 2 on Bus 0
+        ("Sensor 3", "x046", hdc302x_Driver.HDC302X(i2c0, address=0x46)), #Sensor 3 on Bus 0
+        ("Sensor 4", "x047", hdc302x_Driver.HDC302X(i2c0, address=0x47)), #Sensor 4 on Bus 0
+        ("Sensor 5", "x044", hdc302x_Driver.HDC302X(i2c1, address=0x44)), #Sensor 5 on Bus 1
+        ("Sensor 6", "x045", hdc302x_Driver.HDC302X(i2c1, address=0x45)), #Sensor 6 on Bus 1
+        ("Sensor 7", "x046", hdc302x_Driver.HDC302X(i2c1, address=0x46)), #Sensor 7 on Bus 1
+        ("Sensor 8", "x047", hdc302x_Driver.HDC302X(i2c1, address=0x47))] #Sensor 8 on Bus 1
 
     #Lists All I2C sensorList(name, address, sensor) Data
     timestamps = []
