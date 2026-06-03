@@ -48,7 +48,7 @@ class HDC3022_Sensor:
         HDC302X_Sensors.tempsList.clear()
         HDC302X_Sensors.humsList.clear()
         #Loops Through an Iteration of Data
-        for i, (sensor_name, addrs, sensor) in enumerate(HDC302X_Sensors.sensorList):
+        for i, (sensor_name, addrs, sensor) in enumerate(HDC302X_Sensor.sensorList):
             #Try to Grab Sensor Data, Fill with Placeholders if no Sensor
             try:
                 #Grabs Sensor Data
