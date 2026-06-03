@@ -22,11 +22,12 @@ tft.initr()
 tft.rgb(True)
 tft.rotation(3)
 
+#PLACEHOLDER LISTS FOR PRINT TEST
+listA = [12.34]
+listB = [56.78]
+
+#Display to LCD Screen
 def environment_display():
   tft.fill(TFT.BLACK)
-
-  tft.text((0, 0), "ENV MONITOR", TFT.YELLOW, sysfont, 1, nowrap=True)
-
+  tft.text((0, 0), "Title Text", TFT.YELLOW, sysfont, 1, nowrap=True)
   tft.text((0, 15), "S1 T:{:.2f}C H:{:.2f}%".format(listA[0], listB[0]), TFT.WHITE, sysfont, 1, nowrap=True)
-  tft.text((0, 30), "S2 T:{:.2f}C H:{:.2f}%".format(listA[1], listB[1]), TFT.WHITE, sysfont, 1, nowrap=True)
-  tft.text((0, 45), "S3 T:{:.2f}C H:{:.2f}%".format(listA[2], listB[2]), TFT.WHITE, sysfont, 1, nowrap=True)
