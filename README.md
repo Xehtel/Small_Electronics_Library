@@ -16,7 +16,7 @@ Raspberry Pi Pico W Datasheet [^1]
 
 GitHub to HDC302x Drivers: [^2]
 
-### LCD Folder Links
+### ST7735 Folder Links
 
 GitHub to ST7735 Drivers: [^3] <br>
 GitHub to sysfont: [^4] <br>
