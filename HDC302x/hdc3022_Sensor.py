@@ -2,7 +2,6 @@
 #Created: 5/21/2026
 #Last Edit: Xehtel on 6/3/2026
 #================================================================================================#
-#Requires: hdc302x_Driver.py
 #Interpreter: MicroPython
 #Tested Micro Controllers: Raspberry Pi Pico W, Raspberry Pi Pico 2 W
 #================================================================================================#
