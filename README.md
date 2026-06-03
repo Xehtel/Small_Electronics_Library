@@ -13,7 +13,7 @@ Once all necessary files are on a microcontroller or in a project folder, functi
 Raspberry Pi Pico W Datasheet [^1]
 
 ### HDC302x Folder Links
-hdc302x_AdafruitDriver.py
+
 GitHub to HDC302x Drivers: [^2]
 
 ### LCD Folder Links
