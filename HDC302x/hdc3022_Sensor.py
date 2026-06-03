@@ -88,14 +88,14 @@ class HDC3022_Sensor:
         #Debug Prints for Bus 0 & Bus 1 (All Sensors on sensorList) 
         print(f"\n================================SENSOR LOGGER================================")
         print(f"---BUS 0---")
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[0], addrsList[0], tempsList[0], humsList[0], timestamps[0])) #Bus 0 Sensor 1 Log
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[1], addrsList[1], tempsList[1], humsList[1], timestamps[1])) #Bus 0 Sensor 2 Log
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[2], addrsList[2], tempsList[2], humsList[2], timestamps[2])) #Bus 0 Sensor 3 Log
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[3], addrsList[3], tempsList[3], humsList[3], timestamps[3])) #Bus 0 Sensor 4 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[0], HDC302X_Sensor.addrsList[0], HDC302X_Sensor.tempsList[0], HDC302X_Sensor.humsList[0], HDC302X_Sensor.timestamps[0])) #Bus 0 Sensor 1 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[1], HDC302X_Sensor.addrsList[1], HDC302X_Sensor.tempsList[1], HDC302X_Sensor.humsList[1], HDC302X_Sensor.timestamps[1])) #Bus 0 Sensor 2 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[2], HDC302X_Sensor.addrsList[2], HDC302X_Sensor.tempsList[2], HDC302X_Sensor.humsList[2], HDC302X_Sensor.timestamps[2])) #Bus 0 Sensor 3 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[3], HDC302X_Sensor.addrsList[3], HDC302X_Sensor.tempsList[3], HDC302X_Sensor.humsList[3], HDC302X_Sensor.timestamps[3])) #Bus 0 Sensor 4 Log
         print(f"---BUS 1---")
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[4], addrsList[4], tempsList[4], humsList[4], timestamps[4])) #Bus 1 Sensor 5 Log
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[5], addrsList[5], tempsList[5], humsList[5], timestamps[5])) #Bus 1 Sensor 6 Log
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[6], addrsList[6], tempsList[6], humsList[6], timestamps[6])) #Bus 1 Sensor 7 Log
-        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(nameList[7], addrsList[7], tempsList[7], humsList[7], timestamps[7])) #Bus 1 Sensor 8 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[4], HDC302X_Sensor.addrsList[4], HDC302X_Sensor.tempsList[4], HDC302X_Sensor.humsList[4], HDC302X_Sensor.timestamps[4])) #Bus 1 Sensor 5 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[5], HDC302X_Sensor.addrsList[5], HDC302X_Sensor.tempsList[5], HDC302X_Sensor.humsList[5], HDC302X_Sensor.timestamps[5])) #Bus 1 Sensor 6 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[6], HDC302X_Sensor.addrsList[6], HDC302X_Sensor.tempsList[6], HDC302X_Sensor.humsList[6], HDC302X_Sensor.timestamps[6])) #Bus 1 Sensor 7 Log
+        print("{} ({}): Temperature = {:.2f}°C  |  Humidity = {:.1f}%  |  {}".format(HDC302X_Sensor.nameList[7], HDC302X_Sensor.addrsList[7], HDC302X_Sensor.tempsList[7], HDC302X_Sensor.humsList[7], HDC302X_Sensor.timestamps[7])) #Bus 1 Sensor 8 Log
         time.sleep(1.0) #Functions Print Delay in Seconds
 #===================================END OF DEBUGGING FUNCTIONS===================================#
