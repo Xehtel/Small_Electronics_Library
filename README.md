@@ -2,27 +2,22 @@
 
 ## GENERAL INSTRUCTIONS
 
-A list of general instructions based on the steps I used to setup each small electronic.
+Most files should be able to be dropped in and function provided the required hardware is setup and all dependencies are installed.
 
 Once all necessary files are on a microcontroller or in a project folder, functions can be called upon in a main.py to start testing your setup.
 
 *Note: More or less setup may be required depending on your personal setup.
 
-### General Documentation
+### General Documentation Links
 
 Raspberry Pi Pico W Datasheet [^1]
 
-### HDC302x Folder
-
-You will need to install the hdc302x_AdafruitDriver.py file to use anything in this folder. <br>
+### HDC302x Folder Links
+hdc302x_AdafruitDriver.py
 GitHub to HDC302x Drivers: [^2]
 
-If using HDC3022, install hdc3022_Sensor.py file. <br>
-Once you have installed the required Driver and Sensor file drag them into a microcontroller or project folder along with a main.py file.
+### LCD Folder Links
 
-### LCD Folder
-
-You will need to install sysfont.py & st7735_Driver.py to use anything in this folder. <br>
 GitHub to ST7735 Drivers: [^3] <br>
 GitHub to sysfont: [^4] <br>
 
