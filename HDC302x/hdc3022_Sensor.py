@@ -6,6 +6,8 @@
 #Interpreter: MicroPython
 #Tested Micro Controllers: Raspberry Pi Pico W, Raspberry Pi Pico 2 W
 #================================================================================================#
+#File Dependencies: hdc302x_Driver.py
+#================================================================================================#
 
 #Imports
 from machine import Pin, I2C
