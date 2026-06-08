@@ -1,23 +1,23 @@
 # SPDX-FileCopyrightText: Copyright (c) 2024 Liz Clark for Adafruit Industries
 # SPDX-License-Identifier: MIT
 # adafruit_hdc302x --> RENAMED: hdc302x_AdafruitDriver
-================================================================================
+#================================================================================================#
 # CircuitPython driver for the Adafruit HDC302x Precision Temperature/Humidity breakout
 # Author(s): Liz Clark
 # Implementation Notes
---------------------
+#================================================================================================#
 # **Hardware:
 # Adafruit HDC3021 Sensor - STEMMA QT / Qwiic <https://www.adafruit.com/product/5989>
 # **Software and Dependencies:
 # Adafruit CircuitPython firmware for the supported boards: https://circuitpython.org/downloads
 # Adafruit's Bus Device library: https://github.com/adafruit/Adafruit_CircuitPython_BusDevice
-================================================================================
+#================================================================================================#
 # Full MicroPython HDC302x driver
 # Converted from Adafruit CircuitPython HDC302x driver
 # Sophia Anderson
-================================================================================
+#================================================================================================#
 # Xehtel - File not found on GitHub, so copied & pasted
-================================================================================
+#================================================================================================#
 import time
 
 class HDC302x:
