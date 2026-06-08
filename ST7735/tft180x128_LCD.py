@@ -9,9 +9,9 @@
 #================================================================================================#
 
 #Imports
-import st7735, time, math
+import st7735_Driver, time, math
 from machine import SPI, Pin, I2C
-from st7735 import TFT
+from st7735_Driver import TFT
 from sysfont import sysfont
 
 #Set SPI & TFT Pins and Connections
