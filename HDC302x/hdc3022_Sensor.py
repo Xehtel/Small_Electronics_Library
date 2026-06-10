@@ -61,7 +61,7 @@ class HDC3022_Sensor:
                 HDC3022_Sensor.humsList.append(hum)
                 #Takes Current Timestamp
                 now = time.localtime() #To Accurately Timestamp Each Sensor Separately, Must Copy to Each Enumeration of Try/Except
-                times = ("{:04d}-{:02d}-{:02d} " "{:02d}:{:02d}:{:02d}").format(now[0], now[1], now[2], now[3], now[4], now[5], now[6], now[7])
+                times = ("{:04d}-{:02d}-{:02d} " "{:02d}:{:02d}:{:02d}").format(now[0], now[1], now[2], now[3], now[4], now[5])
                 #Appends Timestamp
                 HDC3022_Sensor.timestamps.append(times)
             except Exception as e:
@@ -72,7 +72,7 @@ class HDC3022_Sensor:
                 HDC3022_Sensor.humsList.append(0.0)
                 #Takes Current Timestamp
                 now = time.localtime() #To Accurately Timestamp Each Sensor Separately, Must Copy to Each Enumeration of Try/Except
-                times = ("{:04d}-{:02d}-{:02d} " "{:02d}:{:02d}:{:02d}").format(now[0], now[1], now[2], now[3], now[4], now[5], now[6], now[7])
+                times = ("{:04d}-{:02d}-{:02d} " "{:02d}:{:02d}:{:02d}").format(now[0], now[1], now[2], now[3], now[4], now[5])
                 #Appends Timestamp
                 HDC3022_Sensor.timestamps.append(times)
 #=====================================END OF MAIN FUNCTIONS======================================#
